@@ -5,16 +5,18 @@
 #define ESC "esc"
 
 void characterCount() {
-    char input[MAX], output[MAX];
+    char input[MAX];//output[MAX];
     printf("Enter the message (space separated words): ");
     getchar(); // clear newline
     fgets(input, MAX, stdin);
 
-    int len = strlen(input);
-    if (input[len - 1] == '\n') input[len - 1] = '\0';
+    //int len = strlen(input);
+    //if (input[len - 1] == '\n') input[len - 1] = '\0';
 
-    sprintf(output, "%lu %s", strlen(input), input);
-    printf("Character Count Framed Message: %s\n", output);
+    printf("Character Count Framed Message: %lu %s\n", strlen(input)-1, input);
+    
+    //sprintf(output, "%lu %s", strlen(input), input);
+    //printf("Character Count Framed Message: %s\n", output);
 }
 
 void bitStuffing() {
